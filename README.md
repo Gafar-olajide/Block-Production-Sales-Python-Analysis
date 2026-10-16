@@ -91,6 +91,4 @@ A static Python reproduction of the four-page interactive Power BI dashboard:
 
 **Gafar Olajide** | Data Analyst
 
-🔗 GitHub: https://github.com/Gafar-olajide
-
-
+🔗 Original project page (Excel, SPSS/STATA & PowerBI): https://github.com/Gafar-olajide/-Block-Production-Sales-Analysis
