@@ -48,16 +48,16 @@ The Python workflow was cross-checked against the original report. **Nine of 11 
 
 ```text
 Block-Production-Sales-Python-Analysis/
-├── Block_Production_Analysis.ipynb        # Python analysis notebook (Full analysis: cleaning, 17 sections, extensions, validation)
-├── README.md                              # Project overview and findings
-├── Executive_Summary_Block_Production_Sales.pdf	      # Project report 
+├── Block_Production_Analysis.ipynb    # Python analysis notebook (Full analysis: cleaning, 17 sections, extensions, validation)
+├── README.md                          # Project overview and findings
+├── Executive_Summary_Block_Production_Sales.pdf    # Project report 
 └── data/
     ├── Block_Production_Sales_Source.xlsx # Original business workbook
     ├── Analysis_Report.xlsx 	           # Extracted business workbook
-    ├── page1_executive_overview.png           # Extracted python dashboard 1
-    ├── page2_profitability_analysis.png       # Extracted python dashboard 2
-    ├── page3_production_demand.png            # Extracted python dashboard 3
-    └── page4_risk_customer.png                # Extracted python dashboard 4
+    ├── page1_executive_overview.png        # Extracted python dashboard 1
+    ├── page2_profitability_analysis.png    # Extracted python dashboard 2
+    ├── page3_production_demand.png         # Extracted python dashboard 3
+    └── page4_risk_customer.png             # Extracted python dashboard 4
 ```
 
 ## 📌 Main Deliverables
