@@ -72,6 +72,17 @@ Block-Production-Sales-Python-Analysis/
 * 📄 Executive summary report (available as a separate PDF)
 * 🗃️ Original source workbook, included for transparency and reproducibility
 
+## Dashboard
+
+A static Python reproduction of the four-page interactive Power BI dashboard:
+
+| Page | Preview |
+|---|---|
+| Executive Overview | ![Executive Overview](page1_executive_overview.png) |
+| Production & Demand | ![Production & Demand](page3_production_demand.png) |
+| Profitability Analysis | ![Profitability Analysis](page2_profitability_analysis.png) |
+| Risk & Customer | ![Risk & Customer](page4_risk_customer.png) |
+
 ## 🔍 What This Analysis Suggests the Business Should Monitor
 
 * **Profit per block and cost per block**—not production volume alone
@@ -88,72 +99,3 @@ Block-Production-Sales-Python-Analysis/
 🔗 GitHub: https://github.com/Gafar-olajide
 
 
-# Block Production & Sales Performance Analysis
-
-Python (pandas) analysis of a block-moulding business's production and sales performance from 2021 to 2025 — originally built as an Excel dashboard with supporting SPSS/STATA statistical work, rebuilt, validated and extended here in Python.
-
-## Project overview
-
-The business produces and sells three sizes of concrete blocks (6", 7" and 9"). I analysed four years of monthly production records and individual sales transactions to answer three questions: what drives profitability, is the business growing, and where is customer credit risk concentrated.
-
-## Tools
-
-Python · pandas · matplotlib/seaborn · NumPy/SciPy (regression & correlation) · Excel (source data) · Power BI (original dashboard)
-
-## Key findings
-
-- **₦3,178,565 total profit** on ₦18,633,540 in revenue — a **17.1% margin** — across 45,879 blocks produced and 43,230 sold (94.2% sell-through).
-- **Production scale does not drive profitability.** Production correlates strongly with sales, cost and revenue (r = 0.82–0.85), but only very weakly with profit (r = 0.09, not significant). **Cost efficiency, not output volume, is what determines profit.**
-- **Sales volume and cost are the two real profit levers.** Each additional block sold adds ~₦221 to monthly profit; each additional ₦1 of cost reduces it by ~₦0.63 (both significant at p < 0.001, R² = 0.49). A robustness check confirmed this isn't being driven by product mix.
-- **No significant growth trend in revenue** over the four-year period (p = 0.33) — but **production declined significantly**, roughly 31 fewer blocks per month (p = 0.004), nearly stopping through 2024 and early 2025 due to a confirmed operational disruption. The business sustained sales in that period by selling from existing stock.
-- **Customer base is concentrated:** 40% of customers are repeat buyers, and they generate 82% of total revenue.
-- **Cost structure is 70.5% variable** (sand, cement, fuel) **and 29.5% fixed** (labour, maintenance, delivery) — sand and cement together account for roughly two-thirds of total cost, and cost per block rose from ₦148.8 (2021) to ₦546.7 (2025).
-- **Bad debt is low but concentrated:** 0.99% of billed amount overall, weakly and inconsistently related to revenue (r = 0.37, not statistically significant on the available data).
-
-## Validated against the original report
-
-The regression and correlation methodology (complete-case analysis — the same default SPSS/STATA use) was chosen specifically because it reproduces the original report's statistics closely: 9 of 11 cross-checked figures matched exactly, including every correlation coefficient, the cost-per-block progression, the 51% pricing increase from 2023–2024, and both regression R² values. See the notebook (section 17) for the full comparison, including two small factual corrections to the original report's narrative (a stated peak year and a per-unit profitability claim, both one notch off once checked against the underlying numbers).
-
-## Data quality issues identified and resolved
-
-- Two sales records were mis-dated (2014 instead of 2024), which also gave them the wrong weekday in the original weekday-of-sales breakdown.
-- The original customer-value pivot silently excluded two customers whose entire sale was bad debt (zero revenue), understating total quantity sold by 63 blocks.
-- One month's Total Cost was blank in the source file; I derived it from its one recorded cost component rather than leaving it unexplained.
-
-## Dashboard
-
-A static Python reproduction of the four-page interactive Power BI dashboard:
-
-| Page | Preview |
-|---|---|
-| Executive Overview | ![Executive Overview](page1_executive_overview.png) |
-| Production & Demand | ![Production & Demand](page3_production_demand.png) |
-| Profitability Analysis | ![Profitability Analysis](page2_profitability_analysis.png) |
-| Risk & Customer | ![Risk & Customer](page4_risk_customer.png) |
-
-## Repository structure
-
-```
-├── Block_Production_Analysis.ipynb        # Full analysis: cleaning, 17 sections, extensions, validation
-├── Block_Production___Sales_Performance_Analysis.xlsx   # Source data
-├── page1_executive_overview.png           # Dashboard page 1
-├── page2_profitability_analysis.png       # Dashboard page 2
-├── page3_production_demand.png            # Dashboard page 3
-├── page4_risk_customer.png                # Dashboard page 4
-└── README.md
-```
-
-## Methodology
-
-1. **Data cleaning** — standardised columns, corrected two mis-dated records, derived calendar fields directly from the date column rather than relying on hand-typed labels. Blank production cells were kept as missing rather than zero-filled by default, since correlation and regression results differ materially depending on that choice (see the notebook's section 1 and section 17 for why, and which analyses use which).
-2. **Descriptive analysis** — production trends, cost structure, product performance, customer behaviour, replicating and validating every original Excel pivot table.
-3. **Regression analysis** — OLS models (implemented directly with NumPy/SciPy) for profit drivers, revenue drivers, and time trend, with a robustness check adding product mix as a control.
-4. **Correlation analysis** — Pearson correlations across production, cost, sales and bad debt, with significance testing.
-5. **Validation** — a systematic check of this replication's figures against the original report's stated findings.
-6. **Extensions** — a quarterly rollup, exported summary tables, and a validated product-filtered sales breakdown.
-
-See the notebook for full detail, including validation against every original figure.
-
-## Author
-
-Gafar — Data Analyst | [GitHub](https://github.com/Gafar-olajide)
