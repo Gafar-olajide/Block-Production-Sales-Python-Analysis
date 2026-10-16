@@ -54,17 +54,11 @@ Block-Production-Sales-Python-Analysis/
 └── data/
     ├── Block_Production_Sales_Source.xlsx # Original business workbook
     ├── Analysis_Report.xlsx 	           # Extracted business workbook
-    ├── page1_executive_overview.png           # Dashboard page 1
-    ├── page2_profitability_analysis.png       # Dashboard page 2
-    ├── page3_production_demand.png            # Dashboard page 3
-    └── page4_risk_customer.png                # Dashboard page 4
+    ├── page1_executive_overview.png           # Extracted python dashboard 1
+    ├── page2_profitability_analysis.png       # Extracted python dashboard 2
+    ├── page3_production_demand.png            # Extracted python dashboard 3
+    └── page4_risk_customer.png                # Extracted python dashboard 4
 ```
-
-├── Block_Production_Analysis.ipynb        #
-├── Block_Production___Sales_Performance_Analysis.xlsx   # Source data
-
-└── README.md
-
 
 ## 📌 Main Deliverables
 
@@ -92,8 +86,6 @@ A static Python reproduction of the four-page interactive Power BI dashboard:
 * **Repeat-customer revenue concentration** and customer retention
 * **Production interruptions and inventory drawdown** when sales continue despite lower output
 * **Bad-debt exposure** by customer, while avoiding conclusions unsupported by the limited statistical relationship
-
-"See the notebook for full detail, including validation against every original figure."
 
 ## 👤 Author
 
