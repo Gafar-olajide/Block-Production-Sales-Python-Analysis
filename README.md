@@ -92,6 +92,8 @@ A static Python reproduction of the four-page interactive Power BI dashboard:
 * **Production interruptions and inventory drawdown** when sales continue despite lower output
 * **Bad-debt exposure** by customer, while avoiding conclusions unsupported by the limited statistical relationship
 
+"See the notebook for full detail, including validation against every original figure."
+
 ## 👤 Author
 
 **Gafar Olajide** | Data Analyst
