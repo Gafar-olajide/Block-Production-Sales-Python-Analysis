@@ -48,7 +48,7 @@ The Python workflow was cross-checked against the original report. **Nine of 11 
 
 ```text
 Block-Production-Sales-Python-Analysis/
-├── Block_Production_Analysis.ipynb    # Python analysis notebook (cleaning, 17 sections, extensions, validation)
+├── Block_Production_Analysis.ipynb    # Python full analysis notebook (cleaning, 17 sections, extensions, validation)
 ├── README.md                          # Project overview and findings
 ├── Executive_Summary_Block_Production_Sales.pdf    # Project report 
 └── data/
